@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Updated title for automotive business -->
+    <title>Redstone Automotives - Professional Auto Services</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!-- Updated styles with brick red theme, removed intro video, added background video, animations, and sitemap -->
+    <style>
+        :root {
+            --primary-color: #B22222;
+            --primary-dark: #8B1A1A;
+            --primary-light: #CD5C5C;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #212529;
+            --transition-speed: 0.4s;
+            --transition-easing: cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Override ALL green colors with brick red */
+        .filled-button, .main-banner .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+            transition: all var(--transition-speed) var(--transition-easing);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+            .filled-button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: var(--primary-dark);
+                transition: all var(--transition-speed) var(--transition-easing);
+                z-index: -1;
+            }
+
+            .filled-button:hover {
+                background-color: var(--primary-dark) !important;
+                border: 2px solid var(--primary-dark) !important;
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+            }
+
+                .filled-button:hover::before {
+                    left: 0;
+                }
+
+        .section-heading h2 em {
+            color: var(--primary-color) !important;
+            position: relative;
+            display: inline-block;
+        }
+
+            .section-heading h2 em::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background: var(--primary-color);
+                transition: width var(--transition-speed) var(--transition-easing);
+            }
+
+        .section-heading:hover h2 em::after {
+            width: 100%;
+        }
+
+        .navbar-brand h2 {
+            color: var(--primary-color) !important;
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+        .nav-link.current, .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f5f5f5 !important;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+
+            .navbar-nav .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--primary-color);
+                transition: width var(--transition-speed) var(--transition-easing);
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #dc3545 !important;
+                font-weight: bold !important;
+                transform: scale(1.05);
+            }
+
+                .navbar-nav .nav-link:hover::after {
+                    width: 100%;
+                }
+
+        .count-digit {
+            color: var(--primary-color) !important;
+        }
+
+        .service-item .filled-button {
+            background-color: var(--primary-color) !important;
+        }
+
+        /* Additional brick red overrides */
+        .more-info .filled-button, .testimonials .filled-button,
+        .partners .filled-button, footer .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+        }
+
+            .more-info .filled-button:hover, .testimonials .filled-button:hover,
+            .partners .filled-button:hover, footer .filled-button:hover {
+                background-color: var(--primary-dark) !important;
+                border: 2px solid var(--primary-dark) !important;
+            }
+
+        /* Override any remaining green elements */
+        .main-banner .item .text-content .filled-button,
+        .services .service-item .filled-button,
+        .fun-facts .filled-button,
+        .more-info .right-content .filled-button {
+            background-color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+        }
+
+        /* Updated header background to brick red */
+        .sub-header {
+            background-color: var(--primary-color) !important;
+            color: white;
+        }
+
+            .sub-header a {
+                color: white !important;
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+                .sub-header a:hover {
+                    color: #f0f0f0 !important;
+                    transform: translateY(-2px);
+                }
+
+        /* Added background video styles for home section */
+        .main-banner {
+            position: relative;
+            /*            overflow: hidden;*/
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transition: transform 5s var(--transition-easing);
+        }
+
+        .main-banner:hover .background-video {
+            transform: scale(1.05);
+        }
+
+        .main-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+            transition: background var(--transition-speed) var(--transition-easing);
+        }
+
+        .main-banner:hover::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .main-banner .Modern-Slider {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Modern service hover effects */
+        .service-item {
+            transition: all var(--transition-speed) var(--transition-easing);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            background: white;
+        }
+
+        /* Enhanced service hover effects with dynamic red animations */
+        .service-item {
+            transition: all var(--transition-speed) var(--transition-easing);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            background: white;
+        }
+
+            /* Red-themed hover effect */
+            .service-item:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 20px 40px rgba(220, 53, 69, 0.25), 0 0 20px rgba(220, 53, 69, 0.15);
+                animation: redGlow 2s ease-in-out infinite alternate;
+            }
+
+        @keyframes redGlow {
+            0% {
+                box-shadow: 0 20px 40px rgba(220, 53, 69, 0.25), 0 0 20px rgba(220, 53, 69, 0.15);
+            }
+
+            100% {
+                box-shadow: 0 25px 50px rgba(220, 53, 69, 0.35), 0 0 30px rgba(220, 53, 69, 0.25);
+            }
+        }
+
+        /* Added subtle gradient border animation */
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-dark), var(--primary-color));
+            background-size: 300% 300%;
+            opacity: 0;
+            transition: opacity var(--transition-speed) var(--transition-easing);
+            z-index: -1;
+            padding: 2px;
+        }
+
+        .service-item:hover::before {
+            opacity: 1;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Enhanced image and content animations */
+        .service-item img {
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+        .service-item:hover img {
+            transform: scale(1.1) rotate(2deg);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .service-item .service-content {
+            transition: all var(--transition-speed) var(--transition-easing);
+            position: relative;
+        }
+
+        .service-item:hover .service-content {
+            transform: translateY(-5px);
+        }
+
+        .service-item:hover h4 {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+            }
+
+            100% {
+                text-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
+            }
+        }
+
+        .service-item:hover p {
+            color: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        @keyframes redPulse {
+            0%, 100% {
+                box-shadow: 0 25px 50px rgba(220, 20, 60, 0.3), 0 0 30px rgba(220, 20, 60, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 25px 50px rgba(220, 20, 60, 0.4), 0 0 40px rgba(220, 20, 60, 0.3);
+            }
+        }
+
+        /* Added red border animation */
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            background: linear-gradient(45deg, transparent, var(--primary-color), transparent) border-box;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity var(--transition-speed) var(--transition-easing);
+            z-index: 1;
+        }
+
+        .service-item:hover::before {
+            opacity: 1;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            0% {
+                background: linear-gradient(0deg, transparent, var(--primary-color), transparent) border-box;
+            }
+
+            25% {
+                background: linear-gradient(90deg, transparent, var(--primary-color), transparent) border-box;
+            }
+
+            50% {
+                background: linear-gradient(180deg, transparent, var(--primary-color), transparent) border-box;
+            }
+
+            75% {
+                background: linear-gradient(270deg, transparent, var(--primary-color), transparent) border-box;
+            }
+
+            100% {
+                background: linear-gradient(360deg, transparent, var(--primary-color), transparent) border-box;
+            }
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all var(--transition-speed) var(--transition-easing);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced image effects with red overlay and rotation */
+        .service-item:hover img {
+            transform: scale(1.1) rotate(2deg);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        /* Removed red overlay tint from service items */
+        .service-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: transparent;
+            opacity: 0;
+            transition: opacity var(--transition-speed) var(--transition-easing);
+            z-index: 3;
+        }
+
+        .service-item:hover::after {
+            opacity: 0;
+        }
+
+        .service-item .down-content {
+            padding: 20px;
+            position: relative;
+            z-index: 4;
+            background: white;
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+        /* Enhanced content animation with bounce effect */
+        .service-item:hover .down-content {
+            transform: translateY(-8px);
+            animation: contentBounce 0.6s ease-out;
+        }
+
+        @keyframes contentBounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-12px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+
+            70% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .service-item .down-content h4 {
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 10px;
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+            /* Added animated red underline with expanding effect */
+            .service-item .down-content h4::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 3px;
+                background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+                transition: all var(--transition-speed) var(--transition-easing);
+                transform: translateX(-50%);
+            }
+
+        .service-item:hover .down-content h4 {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(220, 20, 60, 0.5), 0 0 30px rgba(220, 20, 60, 0.3);
+            }
+        }
+
+        .service-item:hover .down-content h4::after {
+            width: 80px;
+            animation: underlineShimmer 1.5s ease-in-out infinite;
+        }
+
+        @keyframes underlineShimmer {
+            0%, 100% {
+                background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            }
+
+            50% {
+                background: linear-gradient(90deg, var(--primary-color), #ff6b6b, var(--primary-color));
+            }
+        }
+
+        .service-item .down-content p {
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+        /* Enhanced text animation with typewriter effect */
+        .service-item:hover .down-content p {
+            color: #555;
+            animation: textSlideIn 0.8s ease-out;
+        }
+
+        @keyframes textSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Added animation for count digits */
+        .count-area-content {
+            background: linear-gradient(145deg, #1a1a1a, #2d1b1b);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(220, 53, 69, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            margin: 1 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .count-area-content::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.1), transparent);
+                transition: left 0.6s ease;
+            }
+
+            .count-area-content:hover::before {
+                left: 100%;
+            }
+
+            .count-area-content:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 20px 50px rgba(178, 34, 34, 0.3);
+                border-color: rgba(178, 34, 34, 0.6);
+            }
+
+        .count-digit {
+            font-size: 48px;
+            font-weight: 900;
+            color: #dc3545;
+            text-shadow: 0 0 20px rgba(178, 34, 34, 0.5);
+            margin-bottom: 10px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .count-area-content:hover .count-digit {
+            text-shadow: 0 0 30px rgba(178, 34, 34, 0.8);
+            transform: scale(1.1);
+        }
+
+        .count-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .count-area-content:hover .count-text {
+            color: #ffffff;
+        }
+
+        .count-year {
+            font-size: 14px;
+            color: rgba(224, 224, 224, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .count-area-content:hover .count-year {
+            color: rgba(220, 53, 69, 0.9);
+        }
+
+        /* Added styles for Why Redstone section */
+        .why-redstone {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all var(--transition-speed) var(--transition-easing);
+            display: inline-block;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            transition: all var(--transition-speed) var(--transition-easing);
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .feature-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 0;
+                background: var(--primary-color);
+                transition: height var(--transition-speed) var(--transition-easing);
+            }
+
+            .feature-item:hover {
+                background: #f8f9fa;
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 15px 30px rgba(178, 34, 34, 0.1);
+            }
+
+                .feature-item:hover::before {
+                    height: 100%;
+                }
+
+                .feature-item:hover .feature-icon {
+                    transform: scale(1.1) rotate(5deg);
+                    color: var(--primary-dark);
+                }
+
+            .feature-item h4 {
+                color: var(--primary-color);
+                margin-bottom: 15px;
+                transition: all var(--transition-speed) var(--transition-easing);
+                position: relative;
+            }
+
+            .feature-item:hover h4 {
+                letter-spacing: 0.5px;
+            }
+
+        /* Added styles for mission and vision section */
+        .mission-vision {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+            .mission-vision .row > div {
+                margin-bottom: 30px;
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+                .mission-vision .row > div:hover {
+                    transform: translateY(-5px);
+                }
+
+            .mission-vision h4 {
+                color: var(--primary-color);
+                margin-bottom: 15px;
+                position: relative;
+                display: inline-block;
+            }
+
+                .mission-vision h4::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: var(--primary-color);
+                    transition: width var(--transition-speed) var(--transition-easing);
+                }
+
+            .mission-vision .row > div:hover h4::after {
+                width: 100%;
+            }
+
+        /* WhatsApp Widget Styles */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all var(--transition-speed) var(--transition-easing);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+            .whatsapp-widget:hover {
+                background-color: #128C7E;
+                transform: scale(1.05) rotate(5deg);
+                text-decoration: none;
+                color: white;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            }
+
+        .whatsapp-icon {
+            font-size: 24px;
+            transition: transform var(--transition-speed) var(--transition-easing);
+        }
+
+        .whatsapp-widget:hover .whatsapp-icon {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-widget {
+                padding: 12px;
+                border-radius: 50%;
+            }
+
+            .whatsapp-text {
+                display: none;
+            }
+        }
+
+        /* Added sitemap styles */
+        .sitemap-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            transition: all var(--transition-speed) var(--transition-easing);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .sitemap-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: var(--primary-color);
+                transition: left var(--transition-speed) var(--transition-easing);
+                z-index: 0;
+            }
+
+            .sitemap-item:hover {
+                background: var(--primary-color);
+                color: white;
+                transform: translateX(5px);
+            }
+
+                .sitemap-item:hover::before {
+                    left: 0;
+                }
+
+            .sitemap-item a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+
+            .sitemap-item:hover a {
+                color: white;
+            }
+
+        /* Added general animations */
+        .section-heading {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced smooth scrolling with delay */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add transition delay for smoother experience */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+
+            [id] {
+                scroll-margin-top: 100px;
+                transition: scroll-margin-top var(--transition-speed) var(--transition-easing);
+            }
+        }
+
+        /* Added Our Values section styles */
+        .our-values {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/placeholder.svg?height=600&width=1200') center/cover;
+            padding: 60px 0;
+            color: white;
+        }
+
+            .our-values .section-heading h2,
+            .our-values .section-heading span {
+                color: white;
+            }
+
+                .our-values .section-heading h2 em {
+                    color: var(--primary-color) !important;
+                }
+
+        .value-item {
+            text-align: center;
+            padding: 30px 15px;
+            transition: all var(--transition-speed) var(--transition-easing);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+            .value-item:hover {
+                background: rgba(255,255,255,0.1);
+                transform: translateY(-10px) scale(1.03);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                border-color: var(--primary-color);
+            }
+
+            .value-item i {
+                transition: all var(--transition-speed) var(--transition-easing);
+                display: inline-block;
+            }
+
+            .value-item:hover i {
+                transform: scale(1.2) rotate(5deg);
+                color: var(--primary-light) !important;
+                text-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+            }
+
+            .value-item h5 {
+                color: white;
+                margin: 15px 0 10px 0;
+                font-weight: 600;
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .value-item:hover h5 {
+                letter-spacing: 1px;
+            }
+
+            .value-item p {
+                color: #ccc;
+                font-size: 14px;
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .value-item:hover p {
+                color: white;
+            }
+
+        /* Added standalone map section styles */
+        .map-container {
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+            .map-container:hover {
+                transform: translateY(-5px) scale(1.02);
+                background: var(--primary-color) !important;
+                box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+            }
+
+                .map-container:hover i,
+                .map-container:hover h5,
+                .map-container:hover p {
+                    color: white !important;
+                }
+
+        /* Added CSS for running brand logos animation */
+        .logos-slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .logos-track {
+            display: inline-flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+            .logo-item:hover {
+                transform: scale(1.1);
+            }
+
+            .logo-item img {
+                height: 80px;
+                width: auto;
+                max-width: 120px;
+                object-fit: contain;
+                filter: grayscale(100%);
+                opacity: 0.7;
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .logo-item:hover img {
+                filter: grayscale(0%);
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logos-slider:hover .logos-track {
+            animation-play-state: paused;
+        }
+
+        /* Modern social icon hover effects */
+        .social-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: all var(--transition-speed) var(--transition-easing);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .social-icons li a::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--primary-color);
+                z-index: -1;
+                transform: scale(0);
+                transition: transform var(--transition-speed) var(--transition-easing);
+                border-radius: 50%;
+            }
+
+            .social-icons li a:hover {
+                color: white;
+                transform: translateY(-3px);
+            }
+
+                .social-icons li a:hover::before {
+                    transform: scale(1);
+                }
+
+        /* Modern footer hover effects */
+        .footer-item h4 {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+            .footer-item h4::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background: var(--primary-color);
+                transition: width var(--transition-speed) var(--transition-easing);
+            }
+
+        .footer-item:hover h4::after {
+            width: 100px;
+        }
+
+        .menu-list li a {
+            position: relative;
+            padding-left: 0;
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+            .menu-list li a::before {
+                content: '→';
+                position: absolute;
+                left: -15px;
+                opacity: 0;
+                color: var(--primary-color);
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .menu-list li a:hover {
+                padding-left: 15px;
+                color: var(--primary-color);
+            }
+
+                .menu-list li a:hover::before {
+                    opacity: 1;
+                    left: 0;
+                }
+
+        /* Modern location card hover effect */
+        .location-card {
+            transition: all var(--transition-speed) var(--transition-easing);
+            transform-style: preserve-3d;
+        }
+
+            .location-card:hover {
+                transform: translateY(-5px) rotateX(5deg);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+                border-color: var(--primary-color) !important;
+            }
+
+            .location-card i {
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .location-card:hover i {
+                transform: scale(1.2);
+                color: white !important;
+            }
+
+            .location-card div {
+                transition: all var(--transition-speed) var(--transition-easing);
+            }
+
+            .location-card:hover div {
+                background: white !important;
+            }
+
+                .location-card:hover div span {
+                    color: var(--primary-color) !important;
+                }
+
+        /* Modern sub-footer hover effect */
+        .sub-footer p {
+            transition: all var(--transition-speed) var(--transition-easing);
+        }
+
+            .sub-footer p:hover {
+                letter-spacing: 0.5px;
+            }
+
+            .sub-footer p a {
+                transition: all var(--transition-speed) var(--transition-easing);
+                position: relative;
+            }
+
+                .sub-footer p a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: white;
+                    transition: width var(--transition-speed) var(--transition-easing);
+                }
+
+                .sub-footer p a:hover {
+                    color: white;
+                }
+
+                    .sub-footer p a:hover::after {
+                        width: 100%;
+                    }
+
+        /* Added styles for new sliders */
+        .custom-slider {
+            background: #f8f9fa;
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .service-card, .testimonial-card, .offer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        /* Simple hover effect */
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(178, 34, 34, 0.15);
+        }
+
+        /* Removed all gradient border animations and complex effects */
+        .service-item::before {
+            display: none;
+        }
+
+        .service-item:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-item:hover .service-content {
+            transform: translateY(-2px);
+        }
+
+        /* Centered card titles and simplified text effects */
+        .service-item .down-content h4 {
+            color: var(--text-color);
+            text-align: center;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover .down-content h4 {
+            color: var(--primary-color);
+        }
+
+        /* Removed all complex animations and underline effects */
+        .service-item .down-content h4::after {
+            display: none;
+        }
+
+        .service-item:hover p {
+            color: #666;
+        }
+
+        /* Center align service card titles */
+        .service-card h4 {
+            text-align: center;
+        }
+
+        .slider-nav {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .slider-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+            .slider-btn:hover {
+                background: #c41e3a;
+                transform: scale(1.05);
+            }
+
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .dot.active, .dot:hover {
+                background-color: var(--primary-color);
+            }
+
+        /* Contact info styles */
+        .contact-info {
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            padding: 50px 0;
+            color: white;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+            .contact-card:hover {
+                background: rgba(255,255,255,0.15);
+                transform: translateY(-5px);
+            }
+
+        .contact-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Added modern circular counter styles */
+        .modern-counter-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            position: relative;
+            max-width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Added background image with blur effect for counter section */
+        .counter-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 50%, #000000 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .counter-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at 30% 50%, rgba(220, 53, 69, 0.1) 0%, transparent 50%);
+                z-index: 1;
+            }
+
+            .counter-section .container {
+                position: relative;
+                z-index: 2;
+            }
+
+        /* Added left side image content styling */
+        .counter-image-content {
+            background: linear-gradient(145deg, #2d1b1b, #1a1a1a);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            border: 2px solid rgba(220, 53, 69, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .counter-image-content::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.1), transparent);
+                transition: left 0.6s ease;
+            }
+
+            .counter-image-content:hover::before {
+                left: 100%;
+            }
+
+            .counter-image-content:hover {
+                transform: translateY(-5px);
+                border-color: rgba(220, 53, 69, 0.6);
+                box-shadow: 0 15px 40px rgba(178, 34, 34, 0.2);
+            }
+
+            .counter-image-content img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                border: 1px solid rgba(220, 53, 69, 0.2);
+            }
+
+            .counter-image-content h3 {
+                color: #dc3545;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            .counter-image-content p {
+                color: #e0e0e0;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+        .circular-progress {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring-fill {
+            transition: stroke-dashoffset 2s ease-in-out;
+        }
+
+        .counter-content {
+            position: absolute;
+            text-align: center;
+        }
+
+        .count-digit {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .count-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .count-year {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Added simple contact section styles */
+        .simple-contact-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .simple-contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+            .contact-item:last-child {
+                border-bottom: none;
+            }
+
+            .contact-item i {
+                font-size: 24px;
+                color: var(--primary-color);
+                margin-right: 20px;
+                width: 30px;
+                text-align: center;
+            }
+
+        .contact-details strong {
+            display: block;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .contact-details span {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Added responsive styles for modern counter */
+        @media (max-width: 768px) {
+            .modern-counter-card {
+                padding: 30px;
+                max-width: 250px;
+            }
+
+            .progress-ring {
+                width: 150px;
+                height: 150px;
+            }
+
+            .count-digit {
+                font-size: 2.2rem;
+            }
+
+            .count-label {
+                font-size: 1rem;
+            }
+
+            .simple-contact-form {
+                padding: 30px 20px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+                .contact-item i {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+        }
+
+        /* Additional styling for service images */
+        .service-item .service-image {
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+            /* Added overlay effect on hover */
+            .service-item .service-image::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, rgba(220, 53, 69, 0.1), rgba(178, 34, 34, 0.1));
+                opacity: 0;
+                transition: opacity var(--transition-speed) var(--transition-easing);
+                z-index: 1;
+            }
+
+        .service-item:hover .service-image::before {
+            opacity: 1;
+        }
+
+        .service-item .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-speed) var(--transition-easing);
+        }
+
+        /* Added subtle image zoom on hover */
+        .service-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /*         Added responsive styles for company logo */
+        .navbar-brand img {
+            height: auto;
+            max-width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        /*         Tablet styles */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-height: 65px;
+                max-width: 160px;
+            }
+        }
+
+        /*         Mobile styles */
+        @media (max-width: 480px) {
+            .navbar-brand img {
+                max-height: 60px;
+                max-width: 150px;
+            }
+        }
+
+
+        /* New modern navigation bar design with glass morphism effect */
+        .navbar {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            /*            padding: 15px 0;*/
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            filter: brightness(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+            .navbar-nav .nav-item {
+                margin: 0 5px;
+            }
+
+            .navbar-nav .nav-link {
+                color: #B22222 !important;
+                font-weight: 600;
+                padding: 12px 20px !important;
+                border-radius: 25px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+                .navbar-nav .nav-link::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(178, 34, 34, 0.2), transparent);
+                    transition: left 0.5s;
+                }
+
+                .navbar-nav .nav-link:hover::before {
+                    left: 100%;
+                }
+
+                .navbar-nav .nav-link:hover {
+                    color: #ffffff !important;
+                    background: linear-gradient(135deg, #B22222, #8B0000);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(178, 34, 34, 0.4);
+                    font-weight: 700 !important;
+                }
+
+                .navbar-nav .nav-link.current {
+                    background: linear-gradient(135deg, #B22222, #8B0000);
+                    color: #ffffff !important;
+                    box-shadow: 0 3px 10px rgba(178, 34, 34, 0.3);
+                }
+
+        .navbar-toggler {
+            border: 2px solid #B22222;
+            border-radius: 8px;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23B22222' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                /*                background: rgba(178, 34, 34, 0.95);*/
+                border-radius: 15px;
+                margin-top: 15px;
+                padding: 15px;
+            }
+
+                .navbar-nav .nav-link {
+                    margin: 5px 0;
+                    text-align: center;
+                }
+        }
+
+        .full-divider {
+            position: relative;
+            height: 4px;
+            background: linear-gradient(to right, transparent, #B22222, transparent);
+            margin: 50px 0 40px;
+        }
+
+            .full-divider::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px; /* center highlight length */
+                height: 6px;
+                background: #B22222;
+                border-radius: 3px;
+            }
+
+        /* Added counter section styles */
+        .counter-section {
+            background: url('assets/images/automobiles.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            padding: 80px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .counter-container {
+            max-width: 1100px;
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+
+        .counter-title {
+            font-size: 2.2rem;
+            color: #B22222;
+            margin-bottom: 6px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(231, 76, 60, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .counter-subtitle {
+            font-size: 1rem;
+            color: #ffff;
+            margin-bottom: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .counter-number {
+            font-size: 4.2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ffff, #ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 10px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .counter-text {
+            font-size: 1.1rem;
+            color: #edcc1f;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .counter-year {
+            font-size: 1.7rem;
+            color: #B22222;
+            font-weight: 900;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .counter-number:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 0 15px rgba(231, 76, 60, 0.6));
+        }
+
+        .counter-animation-container {
+            height: 120px;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .tyre-lane {
+            position: relative;
+            width: 100%;
+            height: 170px;
+            overflow: hidden;
+            margin-top: 10px;
+            z-index: 0;
+        }
+
+        .tyre {
+            position: absolute;
+            bottom: 44px;
+            left: -160px;
+            width: 110px;
+            height: 110px;
+            animation: tyre-move 5s linear infinite;
+            will-change: transform;
+            z-index: 0;
+        }
+
+            .tyre img {
+                width: 150%;
+                height: 150%;
+                object-fit: contain;
+                animation: tyre-spin 1s linear infinite;
+                will-change: transform;
+            }
+
+        @keyframes tyre-move {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(100vw + 320px));
+            }
+        }
+
+        @keyframes tyre-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tyre, .tyre img {
+                animation: none;
+            }
+        }
+
+        .counter-number.animate {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .counter-info-text {
+            font-size: 0.9rem;
+            color: #9d9d9d;
+            font-weight: 300px;
+            max-width: 600px;
+            margin: 15px auto 5px;
+            line-height: 1.4;
+            padding: 0 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .counter-stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .counter-stat-box {
+            background: rgba(231, 76, 60, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            margin: 5px;
+            min-width: 120px;
+            border: 1px solid rgba(231, 76, 60, 0.4);
+        }
+
+        .counter-stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 3px;
+        }
+
+        .counter-stat-label {
+            font-size: 0.8rem;
+            color: #ff6b6b;
+        }
+
+        @media (max-width: 768px) {
+            .counter-title {
+                font-size: 1.8rem;
+            }
+
+            .counter-number {
+                font-size: 3.2rem;
+            }
+
+            .counter-container {
+                padding: 20px 15px;
+            }
+
+            .counter-stat-box {
+                min-width: 90px;
+                padding: 8px;
+            }
+
+            .counter-stat-number {
+                font-size: 1.4rem;
+            }
+
+            .counter-animation-container {
+                height: 90px;
+            }
+
+            @keyframes roll {
+                0% {
+                    left: -90px;
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    left: calc(100% + 90px);
+                    transform: rotate(1080deg);
+                }
+            }
+        }
+
+        /* Add this new style for the upcoming badge */
+        .upcoming-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #B22222, #8B0000);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(178, 34, 34, 0.3);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 10px rgba(178, 34, 34, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 4px 15px rgba(178, 34, 34, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 4px 10px rgba(178, 34, 34, 0.3);
+            }
+        }
+
+        .service-item {
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Updated header background to brick red -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <ul class="left-info">
+                        <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Sat 09:00-19:00</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>+91 9600010694</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="right-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61579105573236"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://wa.me/919600010694"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/redstoneautomotivesllp/?viewAsMember=true"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/redstone_automotives_llp?igsh=YzljYTk1ODg3Zg=="><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Changed company name to logo -->
+                <a class="navbar-brand" href="index.html">
+                    <!--<img src="/placeholder.svg?height=50&width=200" alt="Redstone Automotives" style="height: 50px;">-->
+                    <img src="assets/images/ra.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link current" href="#top">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#counter">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#values">Our Values</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Get in Touch</a> <!-- Added anchor link to contact section -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner with background video -->
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+            <div class="item item-1">
+                <div class="img-fill">
+                    <video autoplay muted loop playsinline preload="auto">
+                        <source src="assets/images/redstonevideoo.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added Counter Section -->
+    <div class="counter-section" id="counter">
+        <div class="counter-container">
+            <h1 class="counter-title">Our Achievement</h1>
+            <p class="counter-subtitle">Giving new life to tyres through professional retreading services since 2018</p>
+
+            <div class="counter-number animate" id="counter-number">0</div>
+            <p class="counter-text">Tyres Retreaded Since 2018</p>
+            <div class="counter-year" id="year-display">2018</div>
+
+            <div class="tyre-lane" aria-hidden="true">
+                <div class="tyre">
+                    <img src="assets/images/tyre2.png" alt="Tyre">
+                </div>
+            </div>
+
+            <p class="counter-info-text">Our professional tyre retreading service extends tyre life, reduces waste, and provides cost-effective solutions for commercial vehicles. Eco-friendly and reliable since 2018.</p>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <div class="services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <!-- Updated section heading for automotive services -->
+                        <h2>Our <em>Services</em></h2>
+                        <span>Comprehensive automotive solutions for all your vehicle needs</span>
+                    </div>
+                </div>
+                <!-- Updated services with equal height cards and transition effects -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/jktyre.png" alt="JK tyre">
+                        </div>
+                        <div class="down-content">
+                            <h4>JK Authorised Retread Plant</h4>
+                            <p>
+                                Our state-of-the-art retread plants feature two chambers that effectively meet market demands and ensure timely
+                                delivery to our valued customers. We are associated with, the leading enterprise JK Tyre & Industries Ltd a
+                                prominent tire manufacturer in India and ranks among the top 25 global manufacturers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/maan.jpg" alt="MAN Spares">
+                        </div>
+                        <div class="down-content">
+                            <h4>Spare Parts-MAN Spares</h4>
+                            <p>
+                                Our 13-acre Poonamallee workshop specializes in servicing MAN vehicle parts, backed by over ₹3 Crores in spare parts inventory.
+                                We offer a complete range of line items and engine components to meet diverse needs.
+                                Our OEM-trained technicians expertly handle the latest CRDI technology with precision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/exidee.jpg" alt="EXIDE Batteries">
+                        </div>
+                        <div class="down-content">
+                            <h4>Batteries-EXIDE</h4>
+                            <p>
+                                Redstone is a leading supplier of EXIDE batteries, one of India's most trusted brands for over six decades.
+                                EXIDE's reputation is built on innovation, nationwide presence, and strong client partnerships.
+                                Global joint ventures drive continuous technological advancement and product excellence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/mpover.png" alt="MPover Tyre Powder">
+                        </div>
+                        <div class="down-content">
+                            <h4>Tyre Powder-MPover</h4>
+                            <p>
+                                MPover Cooling Powder, specially formulated for tire cooling, contains silica, magnesium, aluminum, potassium
+                                oxide, and ferric. It reduces heat resistance, extends tire life by up to 10%, prevents heat punctures, and stops tire
+                                and tube sticking. It also prevents tube tearing, flap cracking, and is 100% asbestos-free.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/air.png" alt="TVS Girling AIR">
+                        </div>
+                        <div class="down-content">
+                            <h4>TVS Girling AIR- Brakes India</h4>
+                            <p>
+                                We are authorised service centre for TVS Girling which is established by Brakes India Our technicians are skilled,
+                                well equipped with Universal test rigs and special tools.
+                                Brakes India ASC's provide quality service with genuine parts for M&HCV equipped with Air Brake System.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/mahindraa.jpg" alt="Mahindra My Garage">
+                        </div>
+                        <div class="down-content">
+                            <h4>Mahindra My Garage</h4>
+                            <p>
+                                We are an authorized Mahindra vehicle service provider, for our own Mahindra vehicles. With certified expertise,
+                                genuine parts, and precision care, we ensure every Mahindra vehicle in our operations runs at peak performance,
+                                reliability, and efficiency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/tyre scrap.jpg" alt="EXIDE Batteries">
+                        </div>
+                        <div class="down-content">
+                            <h4>Tyre Scrap Management</h4>
+                            <p>
+                                We provide efficient and environmentally
+                                responsible tyre scrap collection and recycling
+                                services, helping businesses reduce waste and
+                                meet sustainability goals.Together, we can keep ourz planet cleaner, safer, and more sustainable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/btry.jpg" alt="EXIDE Batteries">
+                        </div>
+                        <div class="down-content">
+                            <h4>Battery Scrap Services</h4>
+                            <p>
+                                Our battery scrap management service focuses
+                                on safe, compliant, and eco-friendly disposal
+                                and recycling of automotive batteries. We work
+                                closely with industry partners to ensure
+                                responsible handling that protects the
+                                environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/automoto.jpg" alt="automotives">
+                        </div>
+                        <div class="down-content">
+                            <h4>Automotive Solutions</h4>
+                            <p>
+                                We offer end-to-end automotive solutions for all types
+                                of vehicles—commercial fleets, and heavy-duty trucks.
+                                From preventive maintenance to advanced diagnostics and
+                                major repairs, our highly trained
+                                technicians use cutting-edge tools and genuine parts to ensure maximum performance, safety, and longevity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="service-image">
+                            <img src="assets/images/cpk.jpg" alt="CPK">
+                        </div>
+                        <div class="down-content">
+                            <h4>CPK-Cost Per Kilometer</h4>
+                            <p>
+                                Our service involves maximizing tire life and improving vehicle efficiency to increasing your cost per kilometre.
+                                Our solutions focus on optimal tire management, precision maintenance,
+                                and performance monitoring—helping you reduce operating expenses, increase safety,
+                                and get the most value from every kilometre driven.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card with upcoming badge -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="upcoming-badge">Coming Soon</div>
+                        <div class="service-image">
+                            <img src="assets/images/alignment.png" alt="CPK">
+                        </div>
+                        <div class="down-content">
+                            <h4>Alignment of Wheel</h4>
+                            <p>
+                                At Redstone, our wheel alignment service ensures your vehicle’s wheels
+                                are precisely adjusted to manufacturer specifications.
+                                Proper alignment not only improves handling and safety, but also extends the life of
+                                your tires and helps you save on fuel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Another card with upcoming badge -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="service-item h-100">
+                        <div class="upcoming-badge">Coming Soon</div>
+                        <div class="service-image">
+                            <img src="assets/images/oil.png" alt="CPK">
+                        </div>
+                        <div class="down-content">
+                            <h4>Used oil Recycling Plant</h4>
+                            <p>
+                                We provide sustainable oil recycling solutions that help businesses reduce waste and protect the environment.
+                                Our service ensures used oil is collected, treated, and repurposed efficiently, turning waste into a valuable resource.
+                                We help companies lower their environmental
+                                footprint while complying with industry standards
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Section -->
+        <div class="more-info" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h2>About <em>Redstone Automotives</em></h2>
+                            <span>Get to know about our automotive expertise</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="left-image">
+                            <!--<img src="/placeholder.svg?height=400&width=600" alt="Our Location">-->
+                            <img src="assets/images/about us.jpg" alt="EXIDE Batteries">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <div class="right-content">
+                            <!-- Updated about section for automotive business -->
+                            <p>
+                                Redstone was established in 2018 in Namakkal with the primary objective of meeting the demand for NTC tires.
+                                Acknowledging the shifting market requirements for retread tires, we relocated to Chennai in 2019.
+                                Following the closure of the MAN INDIA plant, we acquired the entire inventory of spare parts.
+                                Presently, the distribution of spare parts has become our central business focus.Now our services extend across the Asia Pacific, SAARC, and
+                                Central Middle East regions, ensuring reliable support and coverage throughout these key markets.
+                                .<br><br>We pride ourselves on transparent pricing,
+                                quality workmanship, and exceptional customer service.
+                                Every vehicle that enters our site receives the same level of care and attention we would give our own.
+                            </p>
+                            <!--<a href="#" class="filled-button">Read More</a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Added mission and vision section -->
+                <div class="mission-vision">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4><i class="fa fa-bullseye" style="color: var(--primary-color); margin-right: 10px;"></i>Our Mission</h4>
+                                <p>To provide exceptional automotive services with integrity, expertise, and customer-focused solutions. We strive to build lasting relationships through honest communication, quality workmanship, and reliable service that exceeds expectations every time.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4><i class="fa fa-eye" style="color: var(--primary-color); margin-right: 10px;"></i>Our Vision</h4>
+                                <p>To be the most trusted automotive service provider in our community, known for innovation, sustainability, and excellence. We envision a future where every customer feels confident and satisfied with their automotive care experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Replaced testimonials section with Why Redstone section -->
+        <div class="why-redstone">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h2>Why <em>Redstone?</em></h2>
+                            <span>Discover what makes us the preferred choice for automotive services</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-item">
+                            <i class="fa fa-cogs feature-icon"></i>
+                            <h4>Multiservice Solution</h4>
+                            <p>Complete automotive care under one roof - from routine maintenance to complex repairs.<br>We handle all your vehicle needs with expertise and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-item">
+                            <i class="fa fa-group feature-icon"></i>
+                            <h4>Partnerships</h4>
+                            <p>Strong relationships with leading parts suppliers and manufacturers ensure quality components.<br>We work with trusted partners to deliver the best service experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-item">
+                            <i class="fa fa-leaf feature-icon"></i>
+                            <h4>Sustainability</h4>
+                            <p>Eco-friendly practices and proper disposal of automotive waste protect our environment.<br>We're committed to sustainable automotive solutions for a greener future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Added Our Values section -->
+        <div class="our-values" id="values">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our <em>Values</em></h2>
+                    <span>Built for Performance. Trusted for Life</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-shield" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Integrity</h5>
+                        <p>Honest and transparent service in every interaction</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-star" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Excellence</h5>
+                        <p>Delivering superior quality in every service we provide</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-users" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Teamwork</h5>
+                        <p>Collaborative approach to solve complex challenges</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-lightbulb-o" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Innovation</h5>
+                        <p>Embracing new technologies and modern solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-heart" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Passion</h5>
+                        <p>Treating every vehicle with attention and respect</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="value-item">
+                        <i class="fa fa-clock-o" style="font-size: 50px; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h5>Reliability</h5>
+                        <p>Consistent service you can depend on every time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added 6 running brand logos below Our Values section -->
+    <div class="brand-logos" style="background: #f8f9fa; padding: 60px 0; overflow: hidden;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Our <em>Partners</em></h2>
+                        <span>Trusted automotive brands we work with</span>
+                    </div>
+                </div>
+            </div>
+            <div class="logos-slider">
+                <div class="logos-track">
+                    <div class="logo-item">
+                        <img src="assets/images/man2.png" alt="MAN">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/exide.png" alt="exide" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/mahi logo.png" alt="mahindra" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brakes india.png" alt="tvs-brakes " />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/mp2.png" alt="mpover" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/jkk.png" alt="jk" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/maha.png" alt="maha" />
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div
+   <div class="logo-item">
+    <img src="assets/images/man2.png" alt="maha" />
+</div>
+ <div class="logo-item">
+    <img src="assets/images/exide.png" alt="exide" />
+</div>
+<div class="logo-item">
+    <img src="assets/images/mahi logo.png" alt="mahindra" />
+</div>
+<div class="logo-item">
+    <img src="assets/images/brakes india.png" alt="tvs-brakes " />
+</div>
+<div class="logo-item">
+    <img src="assets/images/mp2.png" alt="mpover" />
+</div>
+<div class="logo-item">
+    <img src="assets/images/jkk.png" alt="jk" />
+</div>
+                    <div class="logo-item">
+    <img src="assets/images/maha.png" alt="maha" />
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-divider"></div>
+
+    <!-- Fixed navigation link to contact section -->
+    <section class="simple-contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Get in <em style="color: var(--primary-color);">Touch</em></h2>
+                        <span>Contact us for all your automotive needs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="simple-contact-form">
+                        <div class="contact-item">
+                            <i class="fa fa-phone"></i>
+                            <div class="contact-details">
+                                <strong>Phone:</strong>
+                                <span>+91 98402 51694 <br>+91 98405 32694</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope"></i>
+                            <div class="contact-details">
+                                <strong>Email:</strong>
+                                <a href="mailto:rsal.enquiry@redstoneauto.in">rsal.enquiry@redstoneauto.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="contact-details">
+                                <strong>Address:</strong>
+                                <span>
+                                    Redstone Automotive Solutions<br>
+                                    5/231, Padur Main Road,<br> Irulapalayam
+                                    Kuthambakkam(PO),<br> Poonamallee,
+                                    Chennai - 600 124, Tamil Nadu.
+
+                                </span>
+                            </div>
+                            <i class="fa fa-map-marker"></i>
+                            <div class="contact-details">
+                                <span>
+
+                                    <div style="font-weight: 500">Branch Office:<br></div>
+                                    Karpagam Garden, Pattanur,
+                                    Pondy – Tindivanam Road,<br>
+                                    Auroville P.O, Villupuram – 605 101
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Starts Here -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-item">
+                    <!-- Updated footer content for Redstone Automotives -->
+                    <h4> <em style="color: var(--primary-color);">Redstone </em>Automotives</h4>
+                    <p>Your trusted partner for comprehensive automotive solutions. We provide quality services with integrity, expertise, and customer satisfaction as our top priorities.</p>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61579105573236"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/redstone_automotives_llp?igsh=YzljYTk1ODg3Zg=="><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/redstoneautomotivesllp/?viewAsMember=true"><i class="fa fa-linkedin"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-behance"></i></a></li>-->
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item">
+                    <h4>Useful Links</h4>
+                    <ul class="menu-list">
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#counter">Achievements</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#values">Our Values</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Replaced sitemap with Our Location that redirects to maps -->
+                <div class="col-md-6 footer-item last-item">
+                    <h4>Our Location</h4>
+                    <div class="location-container" style="text-align: center;">
+                        <a href="https://maps.app.goo.gl/4LUD5PxyTt5aYrWC9?g_st=aw" target="_blank" style="display: inline-block; text-decoration: none; width: 100%;">
+                            <div class="location-card" style="background: #333; padding: 30px 20px; border-radius: 10px; transition: all 0.3s ease; cursor: pointer; border: 2px solid transparent;">
+                                <i class="fa fa-map-marker" style="font-size: 40px; color: var(--primary-color); margin-bottom: 15px; display: block;"></i>
+                                <h5 style="color: white; margin-bottom: 10px; font-size: 16px;">Visit Our Workshop</h5>
+                                <p style="color: #ccc; margin: 0; font-size: 14px; line-height: 1.4;">Click to view our location<br>on Google Maps</p>
+                                <div style="margin-top: 15px; padding: 8px 16px; background: var(--primary-color); border-radius: 5px; display: inline-block;">
+                                    <span style="color: white; font-size: 12px; font-weight: 500;">GET DIRECTIONS</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <!-- Updated copyright for Redstone Automotives -->
+                        Copyright &copy; 2025 Redstone Automotives LLP
+                        <!--- Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a>-->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Added WhatsApp widget -->
+    <a href="https://wa.me/919600010694?text=Hello%20Redstone%20Automotives,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+       class="whatsapp-widget"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+        <span class="whatsapp-text">Chat with us</span>
+    </a>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/jquery.singlePageNav.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <!-- Enhanced smooth scroll with delay -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const counterElement = document.getElementById('counter-number');
+            const yearElement = document.getElementById('year-display');
+
+            // Safety check
+            if (!counterElement || !yearElement) return;
+
+            const target = 50000;
+            const duration = 3500;
+            const frameRate = 60;
+            const totalFrames = Math.floor(duration / (1000 / frameRate));
+            const increment = target / totalFrames;
+
+            const startYear = 2018;
+            const currentYear = new Date().getFullYear();
+            const yearIncrement = (currentYear - startYear) / totalFrames;
+
+            let currentCount = 0;
+            let currentYearDisplay = startYear;
+            let frame = 0;
+
+            function updateCounter() {
+                if (frame < totalFrames) {
+                    currentCount += increment;
+                    currentYearDisplay += yearIncrement;
+
+                    counterElement.textContent = Math.floor(currentCount).toLocaleString();
+                    yearElement.textContent = Math.floor(currentYearDisplay);
+
+                    frame++;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counterElement.textContent = target.toLocaleString();
+                    yearElement.textContent = currentYear;
+
+                    counterElement.style.filter = 'drop-shadow(0 0 20px rgba(231, 76, 60, 0.7))';
+                    setTimeout(() => {
+                        counterElement.style.filter = 'none';
+                    }, 3000);
+                }
+            }
+
+            counterElement.addEventListener('click', function () {
+                currentCount = 0;
+                currentYearDisplay = startYear;
+                frame = 0;
+                counterElement.textContent = '0';
+                yearElement.textContent = startYear;
+                updateCounter();
+            });
+
+            function startCounterOnScroll() {
+                const rect = counterElement.getBoundingClientRect();
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (rect.top < screenPosition) {
+                    updateCounter();
+                    window.removeEventListener('scroll', startCounterOnScroll); // ✅ Fixed event name
+                }
+            }
+
+            window.addEventListener('scroll', startCounterOnScroll);
+            startCounterOnScroll(); // Trigger in case it's already visible
+        });
+    </script>
+
+</body>
+</html>
